@@ -1,0 +1,24 @@
+<div class="d-flex flex-row bd-highlight mb-9">
+  <div class="p-2 w-100 bd-highlight">
+
+    <div class="input-group mb-12">
+      <span class="input-group-text">Name</span>
+      <input type="text" class="form-control" [(ngModel)]="TaskName">
+    </div>
+    <div class="input-group mb-12">
+      <span class="input-group-text">Priority</span>
+      <input type="text" class="form-control" [(ngModel)]="Priority">
+    </div>
+    <div class="input-group mb-12">
+      <span class="input-group-text">Status</span>
+      <input type="text" class="form-control" [(ngModel)]="Status">
+    </div>
+  </div>
+</div>
+<button (click)="addTask()" *ngIf="task.Priority == '0'" class="btn btn-primary">
+  Add
+</button>
+
+<button (click)="updateDepartment()" *ngIf="task.Priority !='0'" class="btn btn-primary">
+  Update
+</button>
